@@ -8,8 +8,40 @@
 </head>
 <body>
     <main>
-        <section class="container row recipe__add-new">
+        <section class="week-view container">
+            <div class="row">
+                <div id="monday" class="weekday">
+                    <h2 class="weekday--day-name">Monday</h2>
+                    <h1 class="weekday--meal-name">Undecided</h1>
+                    <p class="weekday--meal-description"></p>
+                </div>
+                <div id="tuesday" class="weekday">
+                    <h2 class="weekday--day-name">Tuesday</h2>
+                    <h1 class="weekday--meal-name">Undecided</h1>
+                    <p class="weekday--meal-description"></p>
+                </div>
+                <div id="wednesday" class="weekday">
+                    <h2 class="weekday--day-name">Wednesday</h2>
+                    <h1 class="weekday--meal-name">Undecided</h1>
+                    <p class="weekday--meal-description"></p>
+                </div>
+                <div id="thursday" class="weekday">
+                    <h2 class="weekday--day-name">Thursday</h2>
+                    <h1 class="weekday--meal-name">Undecided</h1>
+                    <p class="weekday--meal-description"></p>
+                </div>
+                <div id="friday" class="weekday">
+                    <h2 class="weekday--day-name">Friday</h2>
+                    <h1 class="weekday--meal-name">Undecided</h1>
+                    <p class="weekday--meal-description"></p>
+                </div>
+            </div>
+        </section>
+        <button type="button" id="openNewRecipeModal">Add a new meal</button>
+        <dialog id="newRecipeModal" class="container new-recipe-modal">
             <form action="http://localhost:2020/api/recipes" method="post" id="recipeForm">
+                <button type="button" id="closeNewRecipeModal">X</button>
+
                 <div class="row">
                     <label for="name">Recipe Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -29,7 +61,7 @@
                 <button type="button" id="addIngredient">Add Ingredient</button>
                 <button type="submit">Add Recipe</button>
             </form>
-        </section>
+        </dialog>
 
         <section class="container recipe__cards" id="recipesContainer">
     

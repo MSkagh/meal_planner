@@ -1,5 +1,19 @@
 const API_URL = 'http://localhost:2020/api/recepies';
 
+
+export const fetchRecepieById = async (id) => {
+    try {
+        const response = await fetch(API_URL + "/" + id);
+        if (!response.ok) {
+            throw new Error(`An error has occurred: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching recepies:', error);
+        throw error;
+    }
+};
+
 export const fetchAllRecepies = async () => {
     try {
         const response = await fetch(API_URL);

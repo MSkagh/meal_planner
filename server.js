@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import { configDotenv } from "dotenv";
-import cors from "cors"; // Import the cors package
+import cors from "cors";
 
 configDotenv();
 const app = express();
