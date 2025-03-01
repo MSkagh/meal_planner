@@ -1,6 +1,5 @@
 const API_URL = 'http://localhost:2020/api/recepies';
 
-
 export const fetchRecepieById = async (id) => {
     try {
         const response = await fetch(API_URL + "/" + id);
